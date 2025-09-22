@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  --color-secondary-50: #f8fafc;
+  --color-secondary-100: #f1f5f9;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e1;
+  --color-secondary-400: #94a3b8;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #475569;
+  --color-secondary-700: #334155;
+  --color-secondary-800: #1e293b;
+  --color-secondary-900: #0f172a;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  code {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+  
+  .code-block {
+    @apply bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto;
+  }
+  
+  .code-block pre {
+    @apply whitespace-pre-wrap;
+  }
+  
+  .endpoint-method {
+    @apply px-2 py-1 rounded text-xs font-semibold;
+  }
+  
+  .method-get {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .method-post {
+    @apply bg-blue-100 text-blue-800;
+  }
+  
+  .method-put {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .method-delete {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  .sidebar-link {
+    @apply block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200;
+  }
+  
+  .sidebar-link.active {
+    @apply text-blue-600 bg-blue-50 font-medium;
+  }
+  
+  .tab-button {
+    @apply px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200;
+  }
+  
+  .tab-button.active {
+    @apply bg-blue-100 text-blue-700;
+  }
+  
+  .tab-button.inactive {
+    @apply text-gray-600 hover:text-blue-600 hover:bg-blue-50;
+  }
+}
